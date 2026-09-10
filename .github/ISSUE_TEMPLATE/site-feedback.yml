@@ -1,0 +1,47 @@
+name: Website feedback
+description: Suggest a change to the benchmark website preview.
+title: "[Site feedback] "
+labels: ["site-feedback"]
+body:
+  - type: dropdown
+    id: area
+    attributes:
+      label: Page or area
+      options:
+        - Homepage / leaderboard
+        - Model comparison
+        - Methodology
+        - Releases
+        - Mobile layout
+        - Wording or terminology
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: What should change?
+      description: Describe what is unclear, missing, or visually distracting.
+      placeholder: The current version… I suggest…
+    validations:
+      required: true
+  - type: textarea
+    id: reason
+    attributes:
+      label: Why would this help?
+      placeholder: This would make it easier for readers to…
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Suggested priority
+      options:
+        - Nice to have
+        - Important before real data
+        - Blocks understanding
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Screenshot or additional context
+      description: Drag in a screenshot or add the device/browser if relevant.
